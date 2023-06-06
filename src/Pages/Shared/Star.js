@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Star = () => {
+const Star = ({text}) => {
     return (
         <div className='p-10 -mb-10'>
             <h1 class="text-center uppercase text-pink-400 text-4xl font-bold  leading-none tracking-normal">
-              Ability & Objectives
+              {text}
             </h1>
             <div class="flex flex-row items-center justify-center py-4">
               <span class="h-1 w-24 bg-pink-400 rounded-full mx-2"></span>

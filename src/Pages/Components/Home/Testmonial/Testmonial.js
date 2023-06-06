@@ -1,73 +1,76 @@
 import React from "react";
+import Star from "../../../Shared/Star";
 import "./Testimonial.css";
 const Testmonial = () => {
   return (
-    <div>
-      <div class="testimonials-section">
-        <input
-          type="radio"
-          name="slider"
-          title="slide1"
-          checked="checked"
-          class="slider__nav"
-        />
-        <input type="radio" name="slider" title="slide2" class="slider__nav" />
-        <input type="radio" name="slider" title="slide3" class="slider__nav" />
-        <input type="radio" name="slider" title="slide4" class="slider__nav" />
-        <input type="radio" name="slider" title="slide5" class="slider__nav" />
-        <div class="slider__inner">
-          <div class="slider__contents">
-            <quote>&rdquo;</quote>
-            <p class="slider__txt">
-              We love you guys. It's easy to order, we get shipments quick and
-              my rep solves tough problems the right way. We get answers that
-              work.
-            </p>
-            <h2 class="slider__caption">Rhonda | NylonCraft</h2>
-          </div>
-          <div class="slider__contents">
-            <quote>&rdquo;</quote>
-            <p class="slider__txt">
-              You all bend over backwards to get it done. Inside sales and the
-              Account Managers are great! It's your service...you all know that
-              it's not just about taking orders it's about service. Why do we
-              choose you guys - your people, your prices, you're quick and you
-              have a ton of technical knowledge.
-            </p>
-            <h2 class="slider__caption">Jared | Rexam</h2>
-          </div>
-          <div class="slider__contents">
-            <quote>&rdquo;</quote>
-            <p class="slider__txt">
-              It's the long-term relationship we have with Proheat that keeps me
-              calling you guys. I trust you, you're quick, and everybody I've
-              ever spoken to there are all great people. Our CEO, Bill, talks
-              about building relationships. That's exactly what Proheat does,
-              and I couldn't be happier.
-            </p>
-            <h2 class="slider__caption">Chris | C&M Fine Pack</h2>
-          </div>
-          <div class="slider__contents">
-            <quote>&rdquo;</quote>
-            <p class="slider__txt">
-              You answer my questions, always takes care of problems, and I
-              never have a hassle.
-            </p>
-            <h2 class="slider__caption">Rex | LNP Engineering Plastics</h2>
-          </div>
-          <div class="slider__contents">
-            <quote>&rdquo;</quote>
-            <p class="slider__txt">
-              Proheat's staff are all so friendly and everybody goes above and
-              beyond. Everyone is courteous, everything is quick and you get us
-              what we need. I have to shop around for everything and we ALWAYS
-              come back to Proheat.
-            </p>
-            <h2 class="slider__caption">Darlene | Russel Stover</h2>
+    <div className="body">
+      <section class="container container--testimonials">
+        <div className="container xl:max-w-6xl mx-auto px-4">
+          <header className="text-center mx-auto lg:px-20">
+            <Star text="TESTIMONIALS" />
+          </header>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text mb-25">
+            At first, it may be intimidating to see all of the available
+            courses. Pick a track that interests you and work through it at your
+            own pace.
+          </p>
+
+          <div class="testimonial__details">
+            <div class="testimonial__img">
+              <img
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                alt="Timmy Dicki"
+              />
+            </div>
+            <div class="testimonial__info">
+              <h4 class="testimonial__name">Timmy Dicki</h4>
+              <h5 class="testimonial__job">Railroad Engineer</h5>
+            </div>
           </div>
         </div>
-      </div>
-      
+
+        <div class="testimonial">
+          <p class="testimonial__text mb-25">
+            I believe it would be very useful to teach cognitive neuroscience
+            and psychology students all some coding skills.
+          </p>
+
+          <div class="testimonial__details">
+            <div class="testimonial__img">
+              <img
+                src="https://images.unsplash.com/photo-1583664426440-daef00e4ad6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Valerie King"
+              />
+            </div>
+            <div class="testimonial__info">
+              <h4 class="testimonial__name">Valerie King</h4>
+              <h5 class="testimonial__job">Customer Service Representative</h5>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text mb-25">
+            I had looked into learning Javascript, but was too intimidated to
+            start. Codecademy was perfect: we both really like learning by
+            doing.
+          </p>
+
+          <div class="testimonial__details">
+            <div class="testimonial__img">
+              <img
+                src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Terrell O'Keefe"
+              />
+            </div>
+            <div class="testimonial__info">
+              <h4 class="testimonial__name">Terrell O'Keefe</h4>
+              <h5 class="testimonial__job">Marketing Professional</h5>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

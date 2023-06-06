@@ -17,16 +17,16 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          
         },
         (error) => {
           console.log(error.text);
         }
-      );e.target.reset()
+      );
+    e.target.reset();
   };
   /* service_ub4qt4r 1234567890 mahabubhasaan@outlook.com */
   return (
-    <div>
+    <div className="bg-slate-800">
       <section class="text-gray-600 body-font relative">
         <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -43,7 +43,7 @@ const Contact = () => {
               /* style="filter: grayscale(1) contrast(1.2) opacity(0.4);" */
             />
 
-            <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+            <div class="bg-white relative flex flex-wrap py-6 rounded ">
               <div class="lg:w-1/2 px-6">
                 <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">
                   ADDRESS
@@ -67,17 +67,17 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div class="lg:w-1/3 md:w-1/2 p-10 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
+          <div class="lg:w-1/3 md:w-1/2 p-10 bg-slate-900 rounded-lg text-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+            <h2 class="text-white text-lg mb-1 font-medium title-font">
               Feedback
             </h2>
-            <p class="leading-relaxed mb-5 text-gray-600">
+            <p class="leading-relaxed mb-5 text-white">
               Post-ironic portland shabby chic echo park, banjo fashion axe
             </p>
 
             <form ref={form} onSubmit={sendEmail}>
               <div class="relative mb-4">
-                <label for="name" class="leading-7 text-sm text-gray-600">
+                <label for="name" class="leading-7 text-sm text-white">
                   Name
                 </label>
                 <input
@@ -88,7 +88,7 @@ const Contact = () => {
                 />
               </div>
               <div class="relative mb-4">
-                <label for="email" class="leading-7 text-sm text-gray-600">
+                <label for="email" class="leading-7 text-sm text-white">
                   Email
                 </label>
                 <input
@@ -99,7 +99,7 @@ const Contact = () => {
                 />
               </div>
               <div class="relative mb-4">
-                <label for="message" class="leading-7 text-sm text-gray-600">
+                <label for="message" class="leading-7 text-sm text-white">
                   Message
                 </label>
                 <textarea
@@ -109,7 +109,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <button class="text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded text-lg w-full">
-                Button
+                SUBMIT
               </button>
             </form>
 

@@ -3,7 +3,7 @@ import CustomBlog from "./Blog/CustomBlog";
 
 const CustomBlogs = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-slate-900 text-white">
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col">
@@ -11,14 +11,9 @@ const CustomBlogs = () => {
               <div class="w-56 h-full bg-pink-500"></div>
             </div>
             <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">
+              <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 text-white">
                 Space The Final Frontier
               </h1>
-              <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
-                Street art subway tile salvia four dollar toast bitters selfies
-                quinoa yuccie synth meditation iPhone intelligentsia prism tofu.
-                Viral gochujang bitters dreamcatcher.
-              </p>
             </div>
           </div>
           <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
@@ -30,10 +25,10 @@ const CustomBlogs = () => {
                   src="https://www.filepicker.io/api/file/eYA6E8L3TiGl0GxpQoS6"
                 />
               </div>
-              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">
-                Shooting Stars
+              <h2 class="text-xl font-medium title-font text-white mt-5">
+                Html Css
               </h2>
-              <p class="text-base leading-relaxed mt-2">
+              <p class="text-white leading-relaxed mt-2">
                 Swag shoivdigoitch literally meditation subway tile tumblr
                 cold-pressed. Gastropub street art beard dreamcatcher neutra,
                 ethical XOXO lumbersexual.
@@ -61,10 +56,10 @@ const CustomBlogs = () => {
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3HmySqfFGq7I8CeHAGrPF0p9cOjj6UAnTOQ&usqp=CAU"
                 />
               </div>
-              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">
-                The Catalyzer
+              <h2 class="text-xl font-medium title-font text-white mt-5">
+                What is React
               </h2>
-              <p class="text-base leading-relaxed mt-2">
+              <p class="text-white leading-relaxed mt-2">
                 Swag shoivdigoitch literally meditation subway tile tumblr
                 cold-pressed. Gastropub street art beard dreamcatcher neutra,
                 ethical XOXO lumbersexual.

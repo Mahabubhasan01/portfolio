@@ -1,20 +1,32 @@
-import './App.css';
-import CustomNavbar from './Pages/Components/Home/Navbar/CustomNavbar';
-import { Route, Routes } from 'react-router-dom';
-import Home from './Pages/Components/Home/Home';
-import Profile from './Pages/Components/Home/Profile/Profile';
-import CustomBlogs from './Pages/Components/Home/Blogs/CustomBlogs';
-import Skills from './Pages/Components/Home/Skills/Skills';
+import React from "react";
+import {  Routes, Route } from "react-router-dom";
+import CustomNavbar from "./Pages/Components/Home/Navbar/CustomNavbar";
+import Home from "./Pages/Components/Home/Home";
+import Profile from "./Pages/Components/Home/Profile/Profile";
+import CustomBlogs from "./Pages/Components/Home/Blogs/CustomBlogs";
+import Skills from "./Pages/Components/Home/Skills/Skills";
+import AllProjects from "./Pages/Components/Home/Portfolio/AllProjects";
+import Contact from "./Pages/Components/Home/Contact/Contact";
 
 function App() {
+  const routeConfigurations = [
+    { path: "/", element: <Home /> },
+    { path: "/profile", element: <Profile /> },
+    { path: "/blogs", element: <CustomBlogs /> },
+    { path: "/skills", element: <Skills /> },
+    { path: "/all-projects", element: <AllProjects /> },
+    { path: "/contact", element: <Contact /> },
+  ];
+
   return (
-    <div>
-      <CustomNavbar/>
+    <div className="bg-black">
+      <CustomNavbar />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/blogs' element={<CustomBlogs/>}/>
-        <Route path='/skills' element={<Skills/>}/>
+        <Route>
+          {routeConfigurations.map(({ path, element }, index) => (
+            <Route key={index} path={path} element={element} />
+          ))}
+        </Route>
       </Routes>
     </div>
   );

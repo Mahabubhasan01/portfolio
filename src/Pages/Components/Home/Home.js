@@ -2,12 +2,11 @@ import React from 'react';
 import CustomBlogs from './Blogs/CustomBlogs';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
-import Hero from './Hero/Hero';
+import Hero from './Hero/HeroSection';
 import Portfolio from './Portfolio/Portfolio';
 import Profile from './Profile/Profile';
 import Skills from './Skills/Skills';
 import Subhero from './SubHero/Subhero';
-import Summery from './SummeryCount/Summery';
 import Testmonial from './Testmonial/Testmonial';
 
 const Home = () => {
@@ -18,7 +17,6 @@ const Home = () => {
             <Subhero/>
             <Skills/>
             <Portfolio/>
-            <Summery/>
             <Testmonial/>
             <CustomBlogs/>
             <Contact/>

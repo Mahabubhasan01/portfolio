@@ -1,20 +1,20 @@
 import React from "react";
 
-const Single = ({ text }) => {
+const Single = ({ text, val }) => {
   return (
-    <div class="w-full bg-gray-900 rounded-lg shadow-lg p-12 flex flex-col justify-center items-center">
-      <div class="mb-8">
+    <div className="w-full bg-gray-900 rounded-lg shadow-lg p-5 flex flex-col justify-center items-center">
+      <div className="mb-8">
         <div
-          class="radial-progress bg-accent text-accent-content border-4 border-accent  "
-          /* style={--size:7rem; --value: 85} */
+          className="radial-progress bg-accent text-accent-content border-4 border-accent"
+          style={{ "--size": "3.5rem", "--value":"80" }}
         >
-          50%
+          {val}
         </div>
       </div>
-      <div class="text-center">
-        <p class="text-xl text-white font-bold mb-2">{text}</p>
-        <p class="text-base text-pink-300 font-normal">
-          _______________________________
+      <div className="text-center">
+        <p className="text-lg text-white font-semibold">{text}</p>
+        <p className="text-base text-pink-300 font-normal">
+          _______________________
         </p>
       </div>
     </div>
