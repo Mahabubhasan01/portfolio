@@ -7,12 +7,14 @@ import CustomBlogs from "./Pages/Components/Home/Blogs/CustomBlogs";
 import Skills from "./Pages/Components/Home/Skills/Skills";
 import AllProjects from "./Pages/Components/Home/Portfolio/AllProjects";
 import Contact from "./Pages/Components/Home/Contact/Contact";
+import BlogDetails from "./Pages/Components/Home/Blogs/Blog/BlogDetails";
 
 function App() {
   const routeConfigurations = [
     { path: "/", element: <Home /> },
     { path: "/profile", element: <Profile /> },
     { path: "/blogs", element: <CustomBlogs /> },
+    { path: "/blog/:id", element: <BlogDetails /> },
     { path: "/skills", element: <Skills /> },
     { path: "/all-projects", element: <AllProjects /> },
     { path: "/contact", element: <Contact /> },

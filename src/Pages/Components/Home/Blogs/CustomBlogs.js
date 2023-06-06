@@ -1,7 +1,13 @@
-import React from "react";
-import CustomBlog from "./Blog/CustomBlog";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CustomBlogs = () => {
+  const navigate = useNavigate();
+  const [blogs, setBlogs] = useState([]);
+  const url = `https://jsonplaceholder.typicode.com/posts`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => setBlogs(data.slice(0, 5)));
   return (
     <div className="bg-slate-900 text-white">
       <section class="text-gray-600 body-font">
@@ -17,69 +23,42 @@ const CustomBlogs = () => {
             </div>
           </div>
           <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div class="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  class="object-cover object-center h-full w-full"
-                  src="https://www.filepicker.io/api/file/eYA6E8L3TiGl0GxpQoS6"
-                />
-              </div>
-              <h2 class="text-xl font-medium title-font text-white mt-5">
-                Html Css
-              </h2>
-              <p class="text-white leading-relaxed mt-2">
-                Swag shoivdigoitch literally meditation subway tile tumblr
-                cold-pressed. Gastropub street art beard dreamcatcher neutra,
-                ethical XOXO lumbersexual.
-              </p>
-              <a class="text-pink-500 inline-flex items-center mt-3">
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
+            {blogs?.map((d) => (
+              <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="rounded-lg h-64 overflow-hidden">
+                  <img
+                    alt="content"
+                    class="object-cover object-center h-full w-full"
+                    src="https://www.filepicker.io/api/file/eYA6E8L3TiGl0GxpQoS6"
+                  />
+                </div>
+                <h2 class="text-xl font-medium title-font text-white mt-5">
+                  {d.title}
+                </h2>
+                <p class="text-white leading-relaxed mt-2">
+                  Swag shoivdigoitch literally meditation subway tile tumblr
+                  cold-pressed. Gastropub street art beard dreamcatcher neutra,
+                  ethical XOXO lumbersexual.
+                </p>
+                <button
+                  onClick={() => navigate(`blog/${d.id}`)}
+                  class="text-pink-500 inline-flex items-center mt-3"
                 >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div class="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  class="object-cover object-center h-full w-full"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3HmySqfFGq7I8CeHAGrPF0p9cOjj6UAnTOQ&usqp=CAU"
-                />
+                  Learn More
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
               </div>
-              <h2 class="text-xl font-medium title-font text-white mt-5">
-                What is React
-              </h2>
-              <p class="text-white leading-relaxed mt-2">
-                Swag shoivdigoitch literally meditation subway tile tumblr
-                cold-pressed. Gastropub street art beard dreamcatcher neutra,
-                ethical XOXO lumbersexual.
-              </p>
-              <a class="text-pink-500 inline-flex items-center mt-3">
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-            <CustomBlog />
+            ))}
           </div>
         </div>
       </section>

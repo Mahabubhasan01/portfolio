@@ -83,7 +83,9 @@ const Portfolio = () => {
           <div className="sm:flex sm:flex-wrap sm:-mx-4 mt-6 md:mt-12 pb-6 marquee__group">
             {filteredDatas?.map((d) => (
               <div
-                className="sm:px-6 sm:w-1/2 lg:w-1/3 mt-8 rounded-lg"
+                className={`sm:px-6 sm:w-1/2 lg:w-1/3 mt-8 rounded-lg ${
+                  filter === "" || d.category === filter ? "fade-in active" : ""
+                }`}
                 key={d.id}
               >
                 <div className="portfolio-item mx-auto max-w-sm">
@@ -96,10 +98,10 @@ const Portfolio = () => {
                     <div className="portfolio-hover"></div>
                   </div>
                   <div className="px-1 py-4">
-                    <h5 className="font-semibold text-xl text-indigo-600 uppercase">
+                    <h5 className="font-semibold text-xl text-indigo-600 uppercase ">
                       {d.name}
                     </h5>
-                    <p className="text-white"></p>
+                    <p className="text-white">{d.username}</p>
                     <div className="flex justify-evenly">
                       <a
                         target="_blank"
