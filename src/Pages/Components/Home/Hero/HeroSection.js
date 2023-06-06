@@ -64,9 +64,9 @@ const HeroSection = () => {
   };
   return (
     <>
-      <div class="containerr   md:p-24 ">
+      <div class="containerr p-12  md:p-24 ">
         <svg
-        className=""
+          className="p-6"
           id="hero-img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 446 314.66"
@@ -265,20 +265,7 @@ const HeroSection = () => {
             />
           </g>
         </svg>
-        <SocialIcons/>
-        {/* <div className="flex justify-evenly">
-          <button class=" btn btn-outline ">
-            Hire Me
-          </button>
-          <a
-          target="_blank"
-          className="btn btn-outline"
-          href="https://drive.google.com/file/d/1jij6s5ajuuD06vRP_-teTNOVdNFSz1Ee/view?usp=sharing"
-        >
-          Get Resume
-        </a>
-        </div> */}
-        
+        <SocialIcons />
       </div>
     </>
   );

@@ -2,7 +2,7 @@
 .social-buttons {
   border-radius: 5px;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
 }
 .social-buttons__button {
@@ -102,14 +102,4 @@
   background: #e4405f;
 }
 
-/* social media icons end  */
-@media screen and (max-width: 768px) {
-    /* Styles for mobile devices */
-    .social-buttons {
-      /* Modify the styles for mobile here */
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-  }
   

@@ -8,6 +8,7 @@ import Skills from "./Pages/Components/Home/Skills/Skills";
 import AllProjects from "./Pages/Components/Home/Portfolio/AllProjects";
 import Contact from "./Pages/Components/Home/Contact/Contact";
 import BlogDetails from "./Pages/Components/Home/Blogs/Blog/BlogDetails";
+import ScrollToTop from "./Pages/Shared/ScrollToTop";
 
 function App() {
   const routeConfigurations = [
@@ -30,6 +31,7 @@ function App() {
           ))}
         </Route>
       </Routes>
+      <ScrollToTop/>
     </div>
   );
 }

@@ -79,7 +79,7 @@ const CustomNavbar = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-outline focus:border-pulse"
+          className="btn btn-outline focus:border-pulse hover:bg-pink-500"
           href="Mahabub-hasan.pdf"
           download="Mahabub-hasan.pdf"
         >

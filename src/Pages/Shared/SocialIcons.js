@@ -6,51 +6,51 @@ import { BsInstagram } from "react-icons/bs";
 
 const SocialIcons = () => {
   return (
-    <div class="social-buttons">
+    <div className="social-buttons">
       <a
-        href="#"
-        class="social-buttons__button social-button social-button--facebook"
+        href="https://www.facebook.com/IamMahabubHasan"
+        className="social-buttons__button social-button social-button--facebook"
         aria-label="Facebook"
       >
-        <span class="social-button__inner">
+        <span className="social-button__inner">
           <FaFacebookF />
         </span>
       </a>
       <a
-        href="#"
-        class="social-buttons__button social-button social-button--linkedin"
+        href="https://www.linkedin.com/in/mahabub-hasaan/"
+        className="social-buttons__button social-button social-button--linkedin"
         aria-label="LinkedIn"
       >
-        <span class="social-button__inner">
+        <span className="social-button__inner">
           <FaLinkedinIn />
         </span>
       </a>
       <a
-        href="https://www.instagram.com/learningatwebdev/"
-        target="_blank"
-        class="social-buttons__button social-button social-button--instagram"
-        aria-label="InstaGram"
+        href="https://www.instagram.com/mahabub.hasaan/"
+        target="blank"
+        className="social-buttons__button social-button social-button--instagram"
+        aria-label="Instagram"
       >
-        <span class="social-button__inner">
+        <span className="social-button__inner">
           <BsInstagram />
         </span>
       </a>
       <a
-        href="#"
-        class="social-buttons__button social-button social-button--github"
+        href="https://github.com/Mahabubhasan01"
+        className="social-buttons__button social-button social-button--github"
         aria-label="GitHub"
       >
-        <span class="social-button__inner">
+        <span className="social-button__inner">
           <AiFillGithub />
         </span>
       </a>
       <a
-        href="https://codepen.io/rajshukla9718"
-        target="_blank"
-        class="social-buttons__button social-button social-button--codepen"
-        aria-label="CodePen"
+        href="https://twitter.com/iammahabubhasan"
+        target="blank"
+        className="social-buttons__button social-button social-button--codepen"
+        aria-label="Twitter"
       >
-        <span class="social-button__inner">
+        <span className="social-button__inner">
           <FaTwitter />
         </span>
       </a>

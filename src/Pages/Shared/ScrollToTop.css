@@ -1,0 +1,12 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .scroll-icon {
+    font-size: 30px;
+    color: #F472B6;
+    cursor: pointer;
+  }
+  

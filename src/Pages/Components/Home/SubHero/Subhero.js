@@ -6,8 +6,6 @@ import { SiAircanada, SiAmericanairlines } from "react-icons/si";
 import { ImUserCheck } from "react-icons/im";
 import Star from "../../../Shared/Star";
 import SingleSub from "./SingleSub";
-import img from "./imge.png";
-
 const Subhero = () => {
   const subItems = [
     {

@@ -1,12 +1,16 @@
 import React from "react";
 
 const Single = ({ text, val }) => {
+  const size = "3.5rem";
   return (
     <div className="w-full bg-gray-900 rounded-lg shadow-lg p-5 flex flex-col justify-center items-center">
       <div className="mb-8">
         <div
-          className="radial-progress bg-accent text-accent-content border-4 border-accent"
-          style={{ "--size": "3.5rem", "--value":"80" }}
+          className="radial-progress bg-accent border-4 border-accent"
+          style={{
+            "--size": size,
+            "--value": val,
+          }}
         >
           {val}
         </div>

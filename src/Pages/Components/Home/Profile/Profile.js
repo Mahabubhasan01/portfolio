@@ -50,10 +50,10 @@ const Profile = () => {
               project.
             </blogquoute>
             <div className="flex justify-center">
-              <button className="btn btn-outline text-white font-bold py-2 px-6 rounded-lg text-lg">
+              <button className="btn btn-outline text-white hover:bg-pink-500 font-bold py-2 px-6 rounded-lg text-lg">
                 Hire me
               </button>
-              <button className="ml-4 btn btn-outline text-white font-bold py-2 px-6 rounded-lg text-lg">
+              <button className="ml-4 btn btn-outline text-white hover:bg-pink-500 font-bold py-2 px-6 rounded-lg text-lg">
                 <a href="Mahabub-hasan.pdf" download="Mahabub-hasan.pdf">
                   Get Resume
                 </a>

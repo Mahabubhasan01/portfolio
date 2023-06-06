@@ -22,10 +22,10 @@ const Footer = () => {
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span class="ml-3 text-xl">MAHABUB HASAN</span>
+          <span class="ml-3 text-xl text-white">MAHABUB HASAN</span>
         </a>
         <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-          © 2022 MAHABUB —
+          © 2023 MAHABUB —
           <a
             target="blank"
             href="https://twitter.com/knyttneve"
