@@ -98,21 +98,22 @@ const Portfolio = () => {
                     <div className="portfolio-hover"></div>
                   </div>
                   <div className="px-1 py-4">
-                    <h5 className="font-semibold text-xl text-indigo-600 uppercase ">
+                    <h5 className="font-semibold text-xl text-center text-indigo-600 uppercase ">
                       {d.name}
                     </h5>
-                    <p className="text-white">{d.username}</p>
-                    <div className="flex justify-evenly">
+                    <div className="flex justify-evenly mt-3">
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://niagara-convention-center.netlify.app/"
                       >
-                        <button className="btn bg-indigo-600 hover:bg-pink-700">
+                        <button className="btn btn-outline text-white hover:bg-pink-500 ">
                           Live preview
                         </button>
                       </a>
-                      <button className="btn btn-outline">Source code</button>
+                      <button className="btn btn-outline text-white hover:bg-pink-500 ">
+                        Source code
+                      </button>
                     </div>
                   </div>
                 </div>

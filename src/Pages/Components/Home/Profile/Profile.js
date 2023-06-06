@@ -4,7 +4,7 @@ import Star from "../../../Shared/Star";
 import img from "./me.svg";
 const Profile = () => {
   return (
-    <div className="p-10 bg-slate-900">
+    <div className=" bg-slate-900">
       <section className="text-gray-900 body-font">
         <div className="container xl:max-w-6xl mx-auto px-4">
           <header className="text-center mx-auto lg:px-20">
