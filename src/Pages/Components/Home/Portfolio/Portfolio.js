@@ -38,7 +38,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio-body">
       <div className="bg-slate-900 portfolio-2 py-6 md:py-12">
-        <Star text="Awesome design PORTFOLIO content" />
+        <Star text="Awesome PORTFOLIO content" />
         <div className="container px-4 mx-auto"></div>
 
         <div className="md:flex md:justify-center">

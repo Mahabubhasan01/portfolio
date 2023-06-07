@@ -4,10 +4,11 @@ import { useNavigate } from "react-router-dom";
 const CustomBlogs = () => {
   const navigate = useNavigate();
   const [blogs, setBlogs] = useState([]);
-  const url = `https://jsonplaceholder.typicode.com/posts`;
+  const url = `http://localhost:5000/blogs`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => setBlogs(data.slice(0, 5)));
+    .then((data) => setBlogs(data));
+
   return (
     <div className="bg-slate-900 text-white">
       <section class="text-gray-600 body-font">
@@ -33,15 +34,13 @@ const CustomBlogs = () => {
                   />
                 </div>
                 <h2 class="text-xl font-medium title-font text-white mt-5">
-                  {d.title}
+                  {d.title.split(" ").slice(0, 5).join(" ")}
                 </h2>
                 <p class="text-white leading-relaxed mt-2">
-                  Swag shoivdigoitch literally meditation subway tile tumblr
-                  cold-pressed. Gastropub street art beard dreamcatcher neutra,
-                  ethical XOXO lumbersexual.
+                  {d.content.split(" ").slice(0, 19).join(" ")}
                 </p>
                 <button
-                  onClick={() => navigate(`blog/${d.id}`)}
+                  onClick={() => navigate(`blog/${d._id}`)}
                   class="text-pink-500 inline-flex items-center mt-3"
                 >
                   Learn More

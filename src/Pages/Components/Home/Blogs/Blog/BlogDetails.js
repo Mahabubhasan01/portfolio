@@ -1,19 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./BlogDetail.css";
-import { useParams, useNavigation } from "react-router-dom";
+
 const BlogDetails = () => {
   const indicatorRef = useRef(null);
   const { id } = useParams();
   const [blog, setBlog] = useState();
+  const [viewCount, setViewCount] = useState(1);
 
   useEffect(() => {
-    const url = `https://jsonplaceholder.typicode.com/posts/${id}`;
+    const url = `http://localhost:5000/blogs/${id}`;
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setBlog(data));
+      .then((data) => {
+        setBlog(data);
+        setViewCount(data.viewCount);
+      });
   }, [id]);
+
   const title = blog?.title;
-  const body = blog?.body;
+  const content = blog?.content;
+  const author = blog?.author;
+  const date = blog?.date;
 
   useEffect(() => {
     const scroll = () => {
@@ -30,31 +38,48 @@ const BlogDetails = () => {
       document.removeEventListener("scroll", scroll);
     };
   }, []);
+
+  const calculateReadingTime = (text) => {
+    const wordsPerMinute = 200; // Adjust this value based on average reading speed
+    // Check if the text parameter is defined
+    if (!text || typeof text !== "string") {
+      return 0;
+    }
+    // Calculate the number of words in the text
+    const wordCount = text.trim().split(/\s+/).length;
+
+    // Calculate the reading time in minutes
+    const readingTimeMinutes = Math.ceil(wordCount / wordsPerMinute);
+
+    return readingTimeMinutes;
+  };
+
+  const readingTime = calculateReadingTime(content);
+
   return (
     <>
       {blog ? (
-        <div class="wrapper">
-          <div class="scroll-indicator" ref={indicatorRef}></div>
-          <div class="content-wrapper">
-            <div class="content">
-              <div class="poster">
-                <div class="poster-title">
-                  <h1> Article template </h1>
-                  <div class="line"></div>
-                  <p>{title}</p>
+        <div className="wrapper">
+          <div className="scroll-indicator" ref={indicatorRef}></div>
+          <div className="content-wrapper">
+            <div className="content">
+              <div className="poster">
+                <div className="poster-title">
+                  <h2>{title}</h2>
+                  <div className="line"></div>
                 </div>
-                <div class="poster-buttons">
+                <div className="poster-buttons">
                   <div>
                     <svg
                       viewBox="0 0 24 24"
                       width="24"
                       height="24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="css-i6dzq1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="css-i6dzq1"
                     >
                       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                     </svg>
@@ -65,11 +90,11 @@ const BlogDetails = () => {
                       width="24"
                       height="24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="css-i6dzq1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="css-i6dzq1"
                     >
                       <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
                     </svg>
@@ -80,74 +105,52 @@ const BlogDetails = () => {
                       width="24"
                       height="24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="css-i6dzq1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="css-i6dzq1"
                     >
                       <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                     </svg>
                   </div>
                 </div>
               </div>
-              <div class="info">
-                <div class="block published">
-                  <div class="mini-title">Published</div>
-                  12.09.2022
+              <div className="info">
+                <div className="block published">
+                  <div className="mini-title">Published</div>
+                  {date}
                 </div>
-                <div class="block published">
-                  <div class="mini-title">Views</div>3 251
+                <div className="block published">
+                  <div className="mini-title">Views</div>
+                  {viewCount}
                 </div>
-                <div class="block published">
-                  <div class="mini-title">Likes</div>
+                <div className="block published">
+                  <div className="mini-title">Likes</div>
                   156
                 </div>
-                <div class="block published">
-                  <div class="mini-title">Reading</div>
-                  12 min
+                <div className="block published">
+                  <div className="mini-title">Reading</div>
+                  {readingTime} min
                 </div>
               </div>
-              <div class="words">
+              <div className="words">
                 <p>
-                  <font class="letter">L</font>
-                  hello
+                  <font className="letter">D</font>
+                  {content}
                 </p>
-                <p>
-                  <font class="letter">D</font>
-                  Dolor sit amet, consectetur adipisicing elit. Rem dolorem
-                  possimus delectus officia aspernatur rerum repellendus quos
-                  necessitatibus sed! Deserunt dolor maxime accusantium, vero
-                  nostrum ipsam iure hic repellendus, eum numquam fugiat quo
-                  fuga ducimus minima veritatis. Deserunt dolor maxime
-                  accusantium, vero nostrum ipsam iure hic repellendus, eum
-                  numquam fugiat quo fuga ducimus minima veritatis.
-                </p>
-                <p>
-                  <font class="letter">S</font>
-                  Sit amet, consectetur adipisicing elit. Rem dolorem possimus
-                  delectus officia aspernatur rerum repellendus quos
-                  necessitatibus sed! Deserunt dolor maxime accusantium, vero
-                  nostrum ipsam iure hic repellendus, eum numquam fugiat quo
-                  fuga ducimus minima veritatis. Deserunt dolor maxime
-                  accusantium, vero nostrum ipsam iure hic repellendus, eum
-                  numquam fugiat quo fuga ducimus minima veritatis. Dolor sit
-                  amet, consectetur adipisicing elit. Rem dolorem possimus
-                  delectus officia aspernatur rerum repellendus quos
-                  necessitatibus sed! Deserunt dolor maxime accusantium.
-                </p>
-                <div class="buttons">
+                <div className="buttons">
                   <div>
                     <svg
                       viewBox="0 0 24 24"
                       width="24"
                       height="24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="css-i6dzq1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="css-i6dzq1"
                     >
                       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                     </svg>
@@ -158,53 +161,39 @@ const BlogDetails = () => {
                       width="24"
                       height="24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="css-i6dzq1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="css-i6dzq1"
                     >
                       <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
                     </svg>
                   </div>
                 </div>
               </div>
-              <div class="quote">
+              <div className="quote">
                 <p>
-                  {" "}
-                  <font class="letter">“</font>
+                  <font className="letter">“</font>
                   Nothing could be worse than the fear that one had given up too
                   soon, and left one unexpended effort that might have saved the
                   world.
                 </p>
-                <p class="author">Jane Addams</p>
+                <p className="author">{author}</p>
               </div>
-              <div class="words">
-                <p>
-                  <font class="letter">S</font>
-                  Sit amet, consectetur adipisicing elit. Rem dolorem possimus
-                  delectus officia aspernatur rerum repellendus quos
-                  necessitatibus sed! Deserunt dolor maxime accusantium, vero
-                  nostrum ipsam iure hic repellendus, eum numquam fugiat quo
-                  fuga ducimus minima veritatis. Deserunt dolor maxime
-                  accusantium, vero nostrum ipsam iure hic repellendus, eum
-                  numquam fugiat quo fuga ducimus minima veritatis. Dolor sit
-                  amet, consectetur adipisicing elit. Rem dolorem possimus
-                  delectus officia aspernatur rerum repellendus quos
-                  necessitatibus sed! Deserunt dolor maxime accusantium,
-                </p>
-                <div class="buttons">
+              <div className="words">
+                <div className="buttons">
                   <div>
                     <svg
                       viewBox="0 0 24 24"
                       width="24"
                       height="24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="css-i6dzq1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="css-i6dzq1"
                     >
                       <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                     </svg>
@@ -215,24 +204,24 @@ const BlogDetails = () => {
                       width="24"
                       height="24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="css-i6dzq1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="css-i6dzq1"
                     >
                       <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
                     </svg>
                   </div>
                 </div>
               </div>
-              <div class="author">
-                <div class="image"></div>
+              <div className="author">
+                <div className="image"></div>
               </div>
             </div>
           </div>
-          <div class="footer">
-            <div class="content">
+          <div className="footer">
+            <div className="content">
               <div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
                 voluptate, laboriosam sunt eveniet eius iure, sapiente in

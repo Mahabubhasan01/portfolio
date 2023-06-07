@@ -2,16 +2,17 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import Star from "../../../Shared/Star";
 import img from "./me.svg";
+
 const Profile = () => {
   return (
-    <div className=" bg-slate-900">
+    <div className="bg-slate-900">
       <section className="text-gray-900 body-font">
-        <div className="container xl:max-w-6xl mx-auto px-4">
+        <div className="container xl:max-w-6xl mx-auto py-6 md:py-12">
           <header className="text-center mx-auto lg:px-20">
             <Star text="ABOUT ME" />
           </header>
         </div>
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="container mx-auto flex mt-4 md:flex-row flex-col items-center">
           <div className="md:w-1/2 w-5/6 mb-20 md:mb-0">
             <img className="" alt="hero" src={img} />
           </div>
@@ -25,7 +26,7 @@ const Profile = () => {
                 <Typewriter
                   options={{
                     strings: [
-                      "Enthuasiastic Developer",
+                      "Enthusiastic Developer",
                       "MERN Stack Developer",
                       "Full Stack Developer",
                       "Hungry Learner",
@@ -36,7 +37,7 @@ const Profile = () => {
                 />
               </span>
             </h1>
-            <blogquoute className="mb-8 leading-relaxed text-xl text-white">
+            <p className="mb-8 leading-relaxed text-xl text-white">
               As a full-stack web developer, I bring a passion for crafting
               seamless and dynamic digital experiences. With expertise in both
               front-end and back-end technologies, I thrive in creating
@@ -48,7 +49,7 @@ const Profile = () => {
               drive for learning, I strive to stay at the forefront of web
               development trends, ensuring exceptional results for every
               project.
-            </blogquoute>
+            </p>
             <div className="flex justify-center">
               <button className="btn btn-outline text-white hover:bg-pink-500 font-bold py-2 px-6 rounded-lg text-lg">
                 Hire me
