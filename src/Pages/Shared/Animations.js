@@ -2,9 +2,9 @@ import React from "react";
 import "./HeroSection.css";
 const Animations = () => {
   return (
-    <div class="home-section" id="home">
-      <div class="home-content">
-        <ul class="circles">
+    <div className="home-section" id="home">
+      <div className="home-content">
+        <ul className="circles">
           <li></li>
           <li></li>
           <li></li>

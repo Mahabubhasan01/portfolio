@@ -11,7 +11,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* 
 .body {
   color: var(--white);
   background-color: var(--bg-blue);
@@ -21,7 +21,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
-}
+} */
 .body img {
   max-width: 100%;
   vertical-align: bottom;

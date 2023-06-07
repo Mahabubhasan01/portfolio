@@ -1,52 +1,56 @@
 import React from "react";
-import { AiFillGithub } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillTwitterCircle,
+} from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer class="text-gray-600 body-font bg-black">
-      <div class="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
+    <footer className="text-gray-600 body-font bg-black">
+      <div className="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
         <a
           target="blank"
           href="/"
-          class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+          className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-10 h-10 text-white p-2 bg-pink-500 rounded-full"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            className="w-10 h-10 text-white p-2 bg-pink-500 rounded-full"
             viewBox="0 0 24 24"
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span class="ml-3 text-xl text-white">MAHABUB HASAN</span>
+          <span className="ml-3 text-xl text-white">MAHABUB HASAN</span>
         </a>
-        <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           © 2023 MAHABUB —
           <a
             target="blank"
             href="https://twitter.com/knyttneve"
-            class="text-pink-50a ml-1"
+            className="text-pink-50a ml-1"
             rel="noopener noreferrer"
           >
             @HASAN
           </a>
         </p>
-        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a
             target="blank"
             href="https://www.facebook.com/IamMahabubHasan/"
-            class=" ml-3 text-pink-500"
+            className=" ml-3 text-pink-500"
           >
             <svg
               fill="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-5 h-5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              className="w-5 h-5"
               viewBox="0 0 24 24"
             >
               <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -56,7 +60,7 @@ const Footer = () => {
           <a
             target="blank"
             href="https://github.com/Mahabubhasan01"
-            class="ml-3 text-pink-500"
+            className="ml-3 text-pink-500"
           >
             <span className="text-xl ">
               {" "}
@@ -65,16 +69,36 @@ const Footer = () => {
           </a>
           <a
             target="blank"
+            href="https://www.instagram.com/mahabub.hasaan/"
+            className="ml-3 text-pink-500"
+          >
+            <span className="text-xl ">
+              {" "}
+              <AiFillInstagram />
+            </span>
+          </a>
+          <a
+            target="blank"
+            href="https://twitter.com/iammahabubhasan"
+            className="ml-3 text-pink-500"
+          >
+            <span className="text-xl ">
+              {" "}
+              <AiFillTwitterCircle />
+            </span>
+          </a>
+          <a
+            target="blank"
             href="https://www.aedin.com/in/mahabub-hasaan/"
-            class="ml-3 text-pink-500"
+            className="ml-3 text-pink-500"
           >
             <svg
               fill="currentColor"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="0"
-              class="w-5 h-5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="0"
+              className="w-5 h-5"
               viewBox="0 0 24 24"
             >
               <path

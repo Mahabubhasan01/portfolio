@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsFillGridFill } from "react-icons/bs";
 
 const CustomNavbar = () => {
   return (
@@ -45,12 +44,12 @@ const CustomNavbar = () => {
               <Link to="/profile">About</Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>
-        <span className="font-bold text-4xl inline-flex">
-          <BsFillGridFill /> <span>M:</span>
+        <span className="font-bold text-4xl inline-flex text-pink-500">
+          <span>M:</span>
         </span>
       </div>
       <div className="navbar-center hidden lg:flex">

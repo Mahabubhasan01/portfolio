@@ -41,7 +41,7 @@ const SocialIcons = () => {
         aria-label="GitHub"
       >
         <span className="social-button__inner">
-          <AiFillGithub />
+          <FaTwitter />
         </span>
       </a>
       <a
@@ -51,7 +51,7 @@ const SocialIcons = () => {
         aria-label="Twitter"
       >
         <span className="social-button__inner">
-          <FaTwitter />
+          <AiFillGithub />
         </span>
       </a>
     </div>
