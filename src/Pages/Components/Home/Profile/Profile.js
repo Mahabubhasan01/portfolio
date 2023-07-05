@@ -37,7 +37,7 @@ const Profile = () => {
                 />
               </span>
             </h1>
-            <p className="mb-8 leading-relaxed text-xl text-white">
+            <p className="mb-8 leading-relaxed text-xl text-white p-4 text-justify">
               As a full-stack web developer, I bring a passion for crafting
               seamless and dynamic digital experiences. With expertise in both
               front-end and back-end technologies, I thrive in creating
@@ -50,7 +50,7 @@ const Profile = () => {
               development trends, ensuring exceptional results for every
               project.
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-4">
               <button className="btn btn-outline text-white hover:bg-pink-500 font-bold py-2 px-6 rounded-lg text-lg">
                 Hire me
               </button>
