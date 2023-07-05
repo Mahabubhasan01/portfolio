@@ -7,7 +7,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="text-gray-600 body-font bg-black">
+    <footer className="text-gray-600 body-font bg-black b-0 sticky" >
       <div className="container px-5 py-5 mx-auto flex items-center sm:flex-row flex-col">
         <a
           target="blank"

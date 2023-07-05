@@ -20,7 +20,7 @@ const Home = () => {
             <Testmonial/>
             <CustomBlogs/>
             <Contact/>
-            <Footer/>
+           
         </div>
     );
 };
