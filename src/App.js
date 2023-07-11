@@ -18,7 +18,7 @@ function App() {
     { path: "/blogs", element: <CustomBlogs /> },
     { path: "/blog/:id", element: <BlogDetails /> },
     { path: "/skills", element: <Skills /> },
-    /* { path: "/all-projects", element: <Portfolio /> }, */
+    { path: "/all-projects", element: <Portfolio /> },
     { path: "/contact", element: <Contact /> },
   ];
 
