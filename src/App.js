@@ -5,11 +5,11 @@ import Home from "./Pages/Components/Home/Home";
 import Profile from "./Pages/Components/Home/Profile/Profile";
 import CustomBlogs from "./Pages/Components/Home/Blogs/CustomBlogs";
 import Skills from "./Pages/Components/Home/Skills/Skills";
-import AllProjects from "./Pages/Components/Home/Portfolio/AllProjects";
 import Contact from "./Pages/Components/Home/Contact/Contact";
 import BlogDetails from "./Pages/Components/Home/Blogs/Blog/BlogDetails";
 import ScrollToTop from "./Pages/Shared/ScrollToTop";
 import Footer from "./Pages/Components/Home/Footer/Footer";
+import Portfolio from "./Pages/Components/Home/Portfolio/Portfolio";
 
 function App() {
   const routeConfigurations = [
@@ -18,7 +18,7 @@ function App() {
     { path: "/blogs", element: <CustomBlogs /> },
     { path: "/blog/:id", element: <BlogDetails /> },
     { path: "/skills", element: <Skills /> },
-    { path: "/all-projects", element: <AllProjects /> },
+    /* { path: "/all-projects", element: <Portfolio /> }, */
     { path: "/contact", element: <Contact /> },
   ];
 

@@ -3,7 +3,7 @@ import React from "react";
 const SingleSub = ({ icon, name,intro }) => {
   return (
     <div className=" ">
-      <div className="m-auto my-8 w-96 max-w-lg items-center justify-center overflow-hidden rounded-2xl bg-gray-900  shadow-xl">
+      <div className="m-auto  w-96 items-center justify-center overflow-hidden rounded-2xl bg-gray-900  shadow-xl">
         <div className="h-24"></div>
         <div className="-mt-20 flex justify-center bg-gray-900">
           <p className="p-5 border-2 rounded-full border-slate-400 ">

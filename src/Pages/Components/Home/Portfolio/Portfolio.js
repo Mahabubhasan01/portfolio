@@ -36,10 +36,10 @@ const Portfolio = () => {
     }
   };
   return (
-    <div className="portfolio-body">
-      <div className="bg-slate-900 portfolio-2 py-6 md:py-12">
+    <div className="">
+      <div className="bg-slate-900 portfolio-2 ">
         <Star text="Awesome PORTFOLIO content" />
-        <div className="container px-4 mx-auto"></div>
+        <div className="container  mx-auto"></div>
 
         <div className="md:flex md:justify-center">
           <div className="md:w-10/12 xl:w-8/12 text-center">
